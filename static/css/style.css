@@ -1,0 +1,25 @@
+#editor { 
+    height: 490px;
+    width: 100%;
+    font-size: 15px;
+}
+
+h5 {
+    border:1px solid rgb(0, 160, 35); 
+    padding:1px; 
+}
+
+#output {
+    height: 490px;
+    width: 100%;
+    border: 2px solid rgb(1, 15, 23);
+    padding: 2px;
+    font-size: 15px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2;
+    margin-top: 12px;
+}

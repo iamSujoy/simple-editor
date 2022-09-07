@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Editor | Free Code Editor All Langauge</title>
+    <link rel="icon" href="/static/img/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://htmeditor.com/js/htmeditor.min.js" htmeditor_textarea="output" full_screen="yes"
+        editor_height="480" run_local="no"> </script>
+    <script src="/static/js/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/index.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <form id="form" onsubmit="return excute();" method="post">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/static/img/logo.png" alt="logo" width="42" height="42">
+                    <b>Simple Editor</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <!-- <a class="nav-link" aria-current="page"> Home </a> -->
+                        <select id="lang" class="form-select mx-2" aria-label="Default select example"
+                            onchange="changeLangauge()" required>
+                            <option value="">Choose Langauge</option>
+                            <option value="py">Python 3</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="js">Javascript</option>
+                            <!-- <option value="java">Java</option> -->
+                        </select>
+                        <button type="submit" id="submit" class="btn btn-success">RUN</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <h5>Editor :</h5>
+                    <div id="editor">print("Hello World")</div>
+                </div>
+                <div class="col-4">
+                    <h5>Output :</h5>
+                    <textarea id="output"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <footer>
+        Copyright © 2022 example.com
+    </footer>
+</body>
+
+</html>
