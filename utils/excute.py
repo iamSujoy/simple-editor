@@ -7,7 +7,7 @@ class ExcuteCode:
         self.langauge = langauge
         self.user_code = user_code
         self.filename = self.generate_filename()
-        self.temp_dir = 'temp/'
+        self.temp_dir = '/home/azureuser/temp/'
         self.output = ''
     
     def generate_filename(self):
