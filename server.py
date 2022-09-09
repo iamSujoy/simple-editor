@@ -11,7 +11,7 @@ def home():
         data = json.loads(request.get_data())
         runner = ExcuteCode(data["langauge"], data["code"])
         data['output'] = runner.run()
-        # print(data)
+        print(data)
         return jsonify(data)
     return render_template('index.html') 
 
