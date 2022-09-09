@@ -7,7 +7,7 @@ class ExcuteCode:
         self.langauge = langauge
         self.user_code = user_code
         self.filename = self.generate_filename()
-        self.temp_dir = '/home/azureuser/temp/'
+        self.temp_dir = 'temp/'
         self.output = ''
     
     def generate_filename(self):
@@ -44,7 +44,7 @@ class ExcuteCode:
         file = self.temp_dir + self.filename + '.py'
         with open(file, 'w') as f:
             f.writelines(self.user_code)
-        result = sp.run(['python', file], capture_output= True)
+        result = sp.run(['python3', file], capture_output= True)
         self.set_output(result)
 
     def run_c(self):
