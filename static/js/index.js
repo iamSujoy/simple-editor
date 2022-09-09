@@ -50,7 +50,7 @@ function excute(e) {
         "code": code
     }
 
-    fetch("http://127.0.0.1:5000/", {
+    fetch("http://127.0.0.1:5000", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
@@ -66,6 +66,7 @@ function excute(e) {
             output.innerHTML = data.output;
         }).
         catch(err => {
+            console.log(err);
             let output = document.getElementById("output");
             output.innerHTML = "Please Try Later. Server Error :)"
         });
